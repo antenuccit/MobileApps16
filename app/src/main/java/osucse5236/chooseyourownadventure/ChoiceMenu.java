@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,14 +22,19 @@ public class ChoiceMenu extends AppCompatActivity {
     public Button mOptionOne;
     public Button mOptionTwo;
     public Button mOptionThree;
+    public Button mStatsButton;
 
     public TextView mStoryText;
 
     public ScenarioLibrary lib;
 
-    public static Options tempOp;
-    public static Options tempOp2;
-    public static Options tempOp3;
+
+
+    public static Options tempOp = new Options();
+    public static Options tempOp2 = new Options();
+    public static Options tempOp3 = new Options();
+
+
 
     static {
         tempOp.add("Look around",1);
@@ -38,10 +44,10 @@ public class ChoiceMenu extends AppCompatActivity {
         tempOp2.add("Press the Switch", 6);
         tempOp2.add("Ignore the switch",4);
         tempOp2.add("Look around", 5);
-
-        tempOp3.add("DO NOT CLICK",0);
-        tempOp3.add("DO NOT CLICK",0);
-        tempOp3.add("DO NOT CLICK",0);
+        
+        tempOp3.add("DO NOT fd7",0);
+        tempOp3.add("DO NOT ds",0);
+        tempOp3.add("DO NOT gf",0);
     }
 
 
@@ -56,8 +62,24 @@ public class ChoiceMenu extends AppCompatActivity {
         new Scenario(6,"You press the switch and a door opens! What now?", tempOp3)
     };
 
+    public int mCurrentID = 0;
+    public Scenario mCurrentScenario = testScenarios[0];
 
 
+    public void updateChoiceMenu(){
+        Log.d(TAG,"CurrentID in Update = " + mCurrentID);
+        mStoryText.setText(testScenarios[mCurrentID].mScenarioText);
+        mCurrentScenario = testScenarios[mCurrentID];
+
+        Options currentOptions = testScenarios[mCurrentID].getOptions();
+        Object[] actualOptions = currentOptions.getStrings().toArray();
+
+
+        mOptionOne.setText(actualOptions[0].toString());
+        mOptionTwo.setText(actualOptions[1].toString());
+        mOptionThree.setText(actualOptions[2].toString());
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +87,47 @@ public class ChoiceMenu extends AppCompatActivity {
         Log.d(TAG, "onCreate() called");
         setContentView(R.layout.activity_choice_menu);
 
+        mStoryText = (TextView) findViewById(R.id.story_text);
+
+        mOptionOne = (Button) findViewById(R.id.option_1);
+        mOptionOne.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+                Log.d(TAG, "Option 1 selected");
+                Object[] currentOptions = mCurrentScenario.mOptions.getStrings().toArray();
+                mCurrentID = mCurrentScenario.mOptions.get(currentOptions[0].toString());
+                Log.d(TAG, "CurrentID is now: " + mCurrentID);
+                updateChoiceMenu();
+            }
+        });
+        mOptionTwo = (Button) findViewById(R.id.option_2);
+        mOptionTwo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Option 2 selected");
+                Object[] currentOptions = mCurrentScenario.mOptions.getStrings().toArray();
+                mCurrentID = mCurrentScenario.mOptions.get(currentOptions[1].toString());
+                Log.d(TAG, "CurrentID is now: " + mCurrentID);
+                updateChoiceMenu();
+            }
+        });
+        mOptionThree = (Button) findViewById(R.id.option_3);
+        mOptionThree.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d(TAG, "Option 3 selected");
+                Object[] currentOptions = mCurrentScenario.mOptions.getStrings().toArray();
+                mCurrentID = mCurrentScenario.mOptions.get(currentOptions[2].toString());
+                Log.d(TAG, "CurrentID is now: " + mCurrentID);
+                updateChoiceMenu();
+            }
+        });
+        mStatsButton = (Button) findViewById(R.id.stats_button);
+
+
+
+        updateChoiceMenu();
 
     }
 

@@ -21,17 +21,14 @@ public class Options {
             mMatrix.clear();
         }
 
-        public Set<String> getIds(){
+        public Set<String> getStrings(){
             return mMatrix.keySet();
         }
 
-        public int get(String option, int index) {
+        public int get(String option) {
             return mMatrix.get(option);
         }
 
-    public Options(ArrayMap<String, Integer> item, int id) {
-        mMatrix = item;
-        mScenarioID = id;
-    }
+
 
 }
