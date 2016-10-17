@@ -10,6 +10,8 @@ import android.widget.TextView;
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 
 public class ChoiceMenu extends AppCompatActivity {
@@ -19,24 +21,40 @@ public class ChoiceMenu extends AppCompatActivity {
     public Button mOptionOne;
     public Button mOptionTwo;
     public Button mOptionThree;
-    public Button mOptionFour;
 
     public TextView mStoryText;
 
     public ScenarioLibrary lib;
 
-    public WhereTo tempWT = new WhereTo {
-        tempWT.add("Look around",1);
-        tempWT.add("Think about the situation",2);
-        tempWT.add("Try attacking the wall",3);
-        tempWT.add("Nothing",0);
+    public static Options tempOp;
+    public static Options tempOp2;
+    public static Options tempOp3;
+
+    static {
+        tempOp.add("Look around",1);
+        tempOp.add("Meditate on the situation",3);
+        tempOp.add("Examine the walls",2);
+
+        tempOp2.add("Press the Switch", 6);
+        tempOp2.add("Ignore the switch",4);
+        tempOp2.add("Look around", 5);
+
+        tempOp3.add("DO NOT CLICK",0);
+        tempOp3.add("DO NOT CLICK",0);
+        tempOp3.add("DO NOT CLICK",0);
+    }
+
+
+
+    public Scenario[] testScenarios = new Scenario[]{
+        new Scenario(0,"You wake up in an empty room. What do you do?", tempOp),
+        new Scenario(1,"Looking around the room, you don't see anything new!",tempOp),
+        new Scenario(2,"You examine the walls, but you don't find anything of interest,", tempOp),
+        new Scenario(3,"Your meditation helps you think clearly. When you open your eyes, you immediately notice a switch that sits in line with the wall.", tempOp2),
+        new Scenario(4,"You decide not to press the switch, but you're still trapped in the room",tempOp2),
+        new Scenario(5,"Upon a second inspection, you still don't find anything new in the room", tempOp2),
+        new Scenario(6,"You press the switch and a door opens! What now?", tempOp3)
     };
-
-
-
-    public Scenario tempScen = new Scenario(0,"You wake up in an empty room. What do you do?", tempWT);
-
-    public Scenario[] testScenarios = new Scenario[]{};
 
 
 

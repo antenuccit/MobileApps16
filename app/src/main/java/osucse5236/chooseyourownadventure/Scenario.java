@@ -9,13 +9,13 @@ public class Scenario {
 
     public int mScenarioID;
     public String mScenarioText;
-    public WhereTo mOptions;
+    public Options mOptions;
 
     public int getScenarioID(){return mScenarioID;}
     public String getScenarioText(){return mScenarioText;}
-    public WhereTo getOptions(){return mOptions;}
+    public Options getOptions(){return mOptions;}
 
-    public Scenario(int scenarioID, String scenarioText, WhereTo options){
+    public Scenario(int scenarioID, String scenarioText, Options options){
         mScenarioID = scenarioID;
         mScenarioText = scenarioText;
         mOptions = options;
