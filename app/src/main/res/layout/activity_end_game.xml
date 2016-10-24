@@ -127,7 +127,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:orientation="vertical">
-
         <Button
             android:layout_gravity="center"
             android:layout_width="match_parent"

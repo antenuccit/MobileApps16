@@ -15,4 +15,11 @@
     <string name="stat_6">Stat6: XXX</string>
     <string name="restart">Restart story again with same character and hometown</string>
     <string name="delete_character">Delete character and account</string>
+    <string name="name_input">Please type in a name for your character</string>
+    <string name="name_input2">Character Name:</string>
+    <string name="name_placeholder">(John Barnett)</string>
+    <string name="hometown_input_text">Please type in a hometown for your character, or use Google Location Services to automatically populate it</string>
+    <string name="hometown_input_text2">Hometown:</string>
+    <string name="hometown_placeholder">(Columbus, OH)</string>
+    <string name="google_location">Use Google Location Services</string>
 </resources>

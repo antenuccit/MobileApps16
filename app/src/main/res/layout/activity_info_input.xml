@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center">
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_gravity="top|center"
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/name_input"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_input_text"
+                android:layout_gravity="top|center"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:text="@string/name_input2"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_input_text2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp" />
+            <EditText
+                android:text="@string/name_placeholder"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_input_box"
+                android:layout_gravity="top|center"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:textAlignment="gravity"/>
+            <TextView
+                android:text="@string/hometown_input_text"
+                android:layout_height="wrap_content"
+                android:id="@+id/hometown_input_text"
+                android:layout_gravity="top|center"
+                android:gravity="left"
+                android:textAlignment="gravity"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent" />
+            <TextView
+                android:text="@string/hometown_input_text2"
+                android:layout_height="wrap_content"
+                android:id="@+id/hometown_input_text2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp" />
+            <EditText
+                android:text="@string/hometown_placeholder"
+                android:layout_height="wrap_content"
+                android:id="@+id/hometown_placeholder"
+                android:layout_gravity="top|center"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:textAlignment="gravity"/>
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/google_location"
+                android:text="@string/google_location"
+                android:layout_marginTop="40dp"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
