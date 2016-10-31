@@ -4,4 +4,22 @@
     <string name="option_1">Option 1</string>
     <string name="option_2">Option 2</string>
     <string name="option_3">Option 3</string>
+    <string name="character_name">CHARACTER NAME</string>
+    <string name="hometown">Hometown: XXX</string>
+    <string name="progress">Progress: X%</string>
+    <string name="stat_1">Stat1: XXX</string>
+    <string name="stat_2">Stat2: XXX</string>
+    <string name="stat_3">Stat3: XXX</string>
+    <string name="stat_4">Stat4: XXX</string>
+    <string name="stat_5">Stat5: XXX</string>
+    <string name="stat_6">Stat6: XXX</string>
+    <string name="restart">Restart story again with same character and hometown</string>
+    <string name="delete_character">Delete character and account</string>
+    <string name="name_input">Please type in a name for your character</string>
+    <string name="name_input2">Character Name:</string>
+    <string name="name_placeholder">(John Barnett)</string>
+    <string name="hometown_input_text">Please type in a hometown for your character, or use Google Location Services to automatically populate it</string>
+    <string name="hometown_input_text2">Hometown:</string>
+    <string name="hometown_placeholder">(Columbus, OH)</string>
+    <string name="google_location">Use Google Location Services</string>
 </resources>
