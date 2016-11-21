@@ -10,15 +10,18 @@
     <string name="prompt_account">Account</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login to Existing Character</string>
-    <string name="action_create_new">Create New Character</string>
+    <string name="action_create_new">Create New Account</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_account_too_short">This account name entered is too short</string>
+    <string name="error_account_exists">This account name is already in use</string>
+    <string name="error_invalid_password">This password entered is too short</string>
+    <string name="error_invalid_hometown">This home town entered is too short</string>
+    <string name="error_incorrect_login">Username or password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="action_create_new_character">Create New Character</string>
 
     <string name="character_name">CHARACTER NAME</string>
     <string name="hometown">Hometown: XXX</string>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+             android:orientation="vertical" android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center">
-    <LinearLayout
+        <LinearLayout
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_gravity="top|center"
@@ -64,6 +64,14 @@
                 android:id="@+id/google_location"
                 android:text="@string/google_location"
                 android:layout_marginTop="40dp"
+                android:textSize="10sp"/>
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/create_new_character"
+                android:text="@string/action_create_new_character"
+                android:layout_marginTop="5dp"
                 android:textSize="10sp"/>
         </LinearLayout>
     </ScrollView>
