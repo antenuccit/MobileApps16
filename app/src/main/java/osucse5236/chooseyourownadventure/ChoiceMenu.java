@@ -2,6 +2,7 @@ package osucse5236.chooseyourownadventure;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Point;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -126,7 +127,12 @@ public class ChoiceMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate() called");
-        setContentView(R.layout.activity_choice_menu);
+        if (getResources().getConfiguration().orientation ==
+                Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(R.layout.activity_choice_menu);
+        } else {
+            setContentView(R.layout.activity_choice_menu_l);
+        }
 
         Intent intent = getIntent();
         mCharacterPrefs = getSharedPreferences(intent.getStringExtra("account"), 0);
