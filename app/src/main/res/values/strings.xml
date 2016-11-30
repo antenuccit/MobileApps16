@@ -26,6 +26,7 @@
     <string name="character_name">CHARACTER NAME</string>
     <string name="hometown">Hometown: XXX</string>
     <string name="progress">Progress: X%</string>
+    <string name="stats_title">Character Stats</string>
     <string name="stat_1">Stat1: XXX</string>
     <string name="stat_2">Stat2: XXX</string>
     <string name="stat_3">Stat3: XXX</string>

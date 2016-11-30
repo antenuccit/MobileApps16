@@ -195,7 +195,7 @@ public class ChoiceMenu extends AppCompatActivity {
 
 
                 dialog.setContentView(R.layout.activity_popup);
-                dialog.setTitle("Character Stats");
+                //dialog.setTitle("Character Stats");
 
                 Button btnCancel        = (Button) dialog.findViewById(R.id.cancel);
                 btnCancel.setOnClickListener(new View.OnClickListener(){
@@ -206,6 +206,7 @@ public class ChoiceMenu extends AppCompatActivity {
                 });
                 dialog.show();
 
+                TextView mStatsTitle = (TextView) dialog.findViewById(R.id.stats_title);
                 TextView mMagic = (TextView) dialog.findViewById(R.id.mag);
                 TextView mStr = (TextView) dialog.findViewById(R.id.str);
                 TextView mDex = (TextView) dialog.findViewById(R.id.dex);
@@ -215,6 +216,7 @@ public class ChoiceMenu extends AppCompatActivity {
 
                 String charName = mCharacterPrefs.getString("name","Ooops!");
 
+                mStatsTitle.setText("Character Stats");
                 mCharacterName.setText("Character Name: " + charName);
                 mHometown.setText("Hometown: " + mCharacterPrefs.getString("hometown","Nowhere"));
                 mMagic.setText("Magic = " + mCharacterPrefs.getInt("mag",5));

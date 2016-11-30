@@ -28,8 +28,6 @@ import java.util.List;
 public class CombatActivity extends AppCompatActivity implements SensorEventListener {
 
     private static final String TAG = "Combat";
-
-
     //Combat Countdown Timer
     SensorManager sensManager;
     Sensor sensSpeed;
